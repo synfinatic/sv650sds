@@ -2,7 +2,7 @@ Overview
 ========
 
 SDS (Suzuki Diagnostics System) is a KWP-2000 (sometimes known as K-Line or 
-ISO-14230) protocol running at 10,400 baud.  While the ISO spec covers the 
+ISO-14230) protocol running at 10,400 baud/8n1.  While the ISO spec covers the 
 physical signaling and general protocol, the actual messages and their meaning 
 are left up to the manufacturer to define and impliment.
 
