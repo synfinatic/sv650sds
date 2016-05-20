@@ -5,7 +5,7 @@ work with"""
 
 import argparse
 import string
-
+import sys
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
@@ -19,7 +19,10 @@ if __name__ == "__main__":
             "input file can't also be the output file!")
 
     infile = open(args.infile, "r")
-    outfile = open(args.outfile, "w")
+    if args.outfile != '-':
+        outfile = open(args.outfile, "w")
+    else:
+        outfile = sys.stdout
 
     for line in infile:
         newline = ''.join(filter(lambda x: x in string.printable, line))
