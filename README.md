@@ -62,6 +62,9 @@ understand what is actually going on in the wire.
 
  - https://github.com/HerrRiebmann/KDS2Bluetooth
  - http://ecuhacking.activeboard.com/t56234221/kds-protocol/
+ - http://ecuhacking.activeboard.com/t22573776/sds-protocol/
+   - http://ecuhacking.activeboard.com/t22573776/sds-protocol/?sort=oldestFirst&page=5#comment-49610241
+   - http://ecuhacking.activeboard.com/t22573776/sds-protocol/?sort=oldestFirst&page=5#comment-50643196
  - https://bitbucket.org/tomnz/kawaduino/
  - https://github.com/o5i/Datalogger
  - https://en.wikipedia.org/wiki/Keyword_Protocol_2000

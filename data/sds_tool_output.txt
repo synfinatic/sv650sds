@@ -1,0 +1,170 @@
+Waiting...
+Waiting for someone to talk.
+Waiting...
+Wow!  Short message.  0 bytes long
+Wow!  Short message.  1 bytes long
+OK ToECU [033ms] 5: 81,12,f1,81,05
+OK FromECU [106ms] 8: 80,f1,12,03,c1,ea,8f,c0
+OK ToECU [035ms] 7: 80,12,f1,02,1a,91,30
+OK FromECU [091ms] 23: 80,f1,12,12,5a,91,33,32,39,32,30,2d,31,37,47,32,2a,00,00,00,00,00,b8
+OK ToECU [034ms] 7: 80,12,f1,02,1a,91,30
+OK FromECU [091ms] 23: 80,f1,12,12,5a,91,33,32,39,32,30,2d,31,37,47,32,2a,00,00,00,00,00,b8
+OK ToECU [035ms] 7: 80,12,f1,02,1a,91,30
+OK FromECU [093ms] 23: 80,f1,12,12,5a,91,33,32,39,32,30,2d,31,37,47,32,2a,00,00,00,00,00,b8
+OK ToECU [035ms] 7: 80,12,f1,02,1a,9a,39
+OK FromECU [091ms] 23: 80,f1,12,12,5a,9a,33,32,39,32,30,2d,31,37,47,30,00,00,00,00,00,00,95
+OK ToECU [034ms] 7: 80,12,f1,02,1a,9a,39
+OK FromECU [093ms] 23: 80,f1,12,12,5a,9a,33,32,39,32,30,2d,31,37,47,30,00,00,00,00,00,00,95
+Waiting...
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [060ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [060ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+Waiting...
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [060ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+Waiting...
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+Waiting...
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,c8,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,cf
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [057ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+Waiting...
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [057ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+Waiting...
+OK FromECU [060ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [060ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e5,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ec
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,e3,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,ea
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,90,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,97
+Waiting...
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [060ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+Waiting...
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+Waiting...
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+Waiting...
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [060ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK ToECU [033ms] 6: 80,12,f1,01,82,06
+Waiting...
+OK FromECU [515ms] 6: 80,f1,12,01,c2,46
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+Waiting...
+
