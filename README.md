@@ -20,7 +20,7 @@ Tools
 
 I have the following tools available to me:
 
- - Cheap chinese clone of the "HealTech" Suzuki Diagnostic Tool (SDT)
+ - Cheap chinese clone of the "HealTech" Suzuki Diagnostic Tool (SDT) off eBay
  - Teensy 2.0 + STL9637D K-Line interface 
  - OpenBench Logic Sniffer + OLS
 
@@ -28,16 +28,17 @@ Logic Sniffer
 =============
 
 By using a simple voltage divider using a 33k and 10k resistor, I was able to
-drop the 12V signal of the K-Line to something the OpenBench Logic Sniffer was
-able to process.
+drop the 12V signal of the K-Line to something the 
+[OpenBench Logic Sniffer](http://dangerousprototypes.com/blog/open-logic-sniffer/) 
+was able to process.
 
 Using 50kHz sampling rate and setting a trigger to look for 0x80, I'm able to
 capture the initial 25ms handshake between the SDT and ~12 seconds worth of data.
 
-By using the UART Analyser built in to OLS, I was able to generate a simple CSV
-file with all the communications.  Next step is to build a suite of tools to 
-clean up the data (OLS puts some binary characters in the CSV) and to do some 
-basic decoding of the messages to figure out:
+By using the UART Analyser built in to [OLS](http://ols.lxtreme.nl/), I was 
+able to generate a simple CSV file with all the communications.  Next step is 
+to build a suite of tools to clean up the data (OLS puts some binary characters 
+in the CSV) and to do some basic decoding of the messages to figure out:
 
  - Decode header to determine if sender is ECU or SDT 
  - Decode payload bytes
@@ -52,3 +53,15 @@ Using a simplified version of the code from here: https://github.com/o5i/Datalog
 I was able to validate that the Teensy/STL9637D can communicate to the bike.
 Connecting the two is pretty straight forward (just need +12V, GND and the K-Line 
 off the bike), but you need to remember a 500-1k pull up resistor on the K-Line.
+
+External References
+===================
+
+Most of these links provide background to the KWP-2000 protocol and should help
+understand what is actually going on in the wire.
+
+ - https://github.com/HerrRiebmann/KDS2Bluetooth
+ - http://ecuhacking.activeboard.com/t56234221/kds-protocol/
+ - https://bitbucket.org/tomnz/kawaduino/
+ - https://github.com/o5i/Datalogger
+ - https://en.wikipedia.org/wiki/Keyword_Protocol_2000
