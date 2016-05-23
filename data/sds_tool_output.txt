@@ -3,21 +3,35 @@ Waiting for someone to talk.
 Waiting...
 Wow!  Short message.  0 bytes long
 Wow!  Short message.  1 bytes long
-OK ToECU [033ms] 5: 81,12,f1,81,05
-OK FromECU [106ms] 8: 80,f1,12,03,c1,ea,8f,c0
+
+// Init
+OK ToECU [033ms] 5: 81,12,f1,81,05 
+// Init response
+OK FromECU [106ms] 8: 80,f1,12,03,c1,ea,8f,c0 
+
+// ???
 OK ToECU [035ms] 7: 80,12,f1,02,1a,91,30
 OK FromECU [091ms] 23: 80,f1,12,12,5a,91,33,32,39,32,30,2d,31,37,47,32,2a,00,00,00,00,00,b8
 OK ToECU [034ms] 7: 80,12,f1,02,1a,91,30
 OK FromECU [091ms] 23: 80,f1,12,12,5a,91,33,32,39,32,30,2d,31,37,47,32,2a,00,00,00,00,00,b8
 OK ToECU [035ms] 7: 80,12,f1,02,1a,91,30
 OK FromECU [093ms] 23: 80,f1,12,12,5a,91,33,32,39,32,30,2d,31,37,47,32,2a,00,00,00,00,00,b8
+
+// ???
 OK ToECU [035ms] 7: 80,12,f1,02,1a,9a,39
 OK FromECU [091ms] 23: 80,f1,12,12,5a,9a,33,32,39,32,30,2d,31,37,47,30,00,00,00,00,00,00,95
 OK ToECU [034ms] 7: 80,12,f1,02,1a,9a,39
 OK FromECU [093ms] 23: 80,f1,12,12,5a,9a,33,32,39,32,30,2d,31,37,47,30,00,00,00,00,00,00,95
 Waiting...
+
+// Query all sensors
 OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
+
+// All sensors reponse
 OK FromECU [060ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+
+
+
 OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
 OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
 OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
@@ -150,9 +164,13 @@ OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,
 OK ToECU [035ms] 7: 80,12,f1,02,21,08,ae
 OK FromECU [059ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
 OK ToECU [034ms] 7: 80,12,f1,02,21,08,ae
-OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a
+OK FromECU [058ms] 57: 80,f1,12,34,61,08,00,00,00,00,00,00,00,ff,ff,ff,ff,00,ff,43,cc,41,3d,ff,a7,ff,00,ff,ff,ff,ff,00,00,00,00,ff,ff,ff,ff,ff,ff,47,47,ff,ff,ff,7f,ff,ff,ff,ff,00,04,ff,ff,ff,4a 
+
+// Goodbye!
 OK ToECU [033ms] 6: 80,12,f1,01,82,06
 Waiting...
+
+// Goodbye reponse
 OK FromECU [515ms] 6: 80,f1,12,01,c2,46
 Waiting...
 Waiting...
@@ -168,3 +186,9 @@ Waiting...
 Waiting...
 Waiting...
 
+0-9   80,f1,12,34,61, 08,00,00,00,00,
+10-19 00,00,00,ff,ff, ff,ff,00,ff,43,
+20-29 cc,41,3d,ff,a7, ff,00,ff,ff,ff,  RPM ff,00; TPS ff; IAP: ff; ECT ff
+30-39 ff,00,00,00,00, ff,ff,ff,ff,ff,  ECT: ff; IAPb: 00; GPS: 00; 
+40-49 ff,47,47,ff,ff, ff,7f,ff,ff,ff,  F1: ff; F2: 47; Ign1: ff
+50-56 ff,00,04,ff,ff, ff,4a            Ign2: ff; 
