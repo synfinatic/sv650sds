@@ -33,12 +33,15 @@ drop the 12V signal of the K-Line to something the
 was able to process.
 
 Using 50kHz sampling rate and setting a trigger to look for 0x80, I'm able to
-capture the initial 25ms handshake between the SDT and ~12 seconds worth of data.
+capture the initial 25ms handshake between the SDT and 
+[~12 seconds worth of data](https://github.com/synfinatic/sv650sds/blob/master/data/sds_tool_output.txt).
 
 By using the UART Analyser built in to [OLS](http://ols.lxtreme.nl/), I was 
-able to generate a simple CSV file with all the communications.  Next step is 
-to build a suite of tools to clean up the data (OLS puts some binary characters 
-in the CSV) and to do some basic decoding of the messages to figure out:
+able to generate a 
+[simple CSV file](https://github.com/synfinatic/sv650sds/blob/master/data/001-basic.csv)
+with all the communications.  Next step is to build a suite of tools to clean up the 
+data (OLS puts some binary characters in the CSV) and to do some basic decoding of 
+the messages to figure out:
 
  - Decode header to determine if sender is ECU or SDT 
  - Decode payload bytes
