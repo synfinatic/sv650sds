@@ -7,28 +7,34 @@ bool process_message(uint8_t *message, uint8_t msglen, uint32_t delay);
 void diff_sensors(uint8_t msglen);
 char *calc_rpm(char *str, int len, uint8_t a, uint8_t b);
 char *calc_tps(char *str, int len, uint8_t a, uint8_t b);
+char *calc_tps2(char *str, int len, uint8_t a, uint8_t b);
 char *calc_temp(char *str, int len, uint8_t a, uint8_t b);
+char *calc_temp2(char *str, int len, uint8_t a, uint8_t b);
+char *calc_iap(char *str, int len, uint8_t a, uint8_t b);
 char *calc_stva(char *str, int len, uint8_t a, uint8_t b);
 char *calc_hex(char *str, int len, uint8_t a, uint8_t b);
 char *calc_decimal(char *str, int len, uint8_t a, uint8_t b);
 
 
 
-#define ECU_CODES_LEN 14  // number of ecu codes we support below
+#define ECU_CODES_LEN 17  // number of ecu codes we support below
 const ECU_CODE ecu_codes[ECU_CODES_LEN] PROGMEM = {
-    { 25 , 26 , "RPM"            , &calc_rpm }     , 
-    { 27 , -1 , "TPS"            , &calc_tps  }    , 
-    { 29 , -1 , "ECT"            , &calc_temp  }   , 
-    { 30 , -1 , "IAT"            , &calc_temp }    , 
-    { 31 , -1 , "IAP"            , &calc_hex }     , 
-    { 34 , -1 , "GPS"            , &calc_decimal } , 
-    { 40 , -1 , "Fuel1"          , &calc_decimal } , 
-    { 42 , -1 , "Fuel2"          , &calc_decimal } , 
-    { 49 , -1 , "Ign1"           , &calc_decimal } , 
-    { 50 , -1 , "Ign2"           , &calc_decimal } , 
-    { 54 , -1 , "STVA"           , &calc_decimal } , 
-    { 51 , -1 , "PAIR"           , &calc_decimal } , 
-    { 52 , -1 , "Clutch/FuelMap" , &calc_hex }     , 
+    { 25 , 26 , "RPM"            , &calc_rpm }     ,
+    { 27 , -1 , "TPS"            , &calc_tps  }    ,
+    { 27 , -1 , "TPS"            , &calc_tps2  }   ,
+    { 29 , -1 , "ECT"            , &calc_temp  }   ,
+    { 29 , -1 , "ECT2"           , &calc_temp2  }  ,
+    { 30 , -1 , "IAT"            , &calc_temp }    ,
+    { 30 , -1 , "IAT2"           , &calc_temp2 }   ,
+    { 31 , -1 , "IAP"            , &calc_iap }     ,
+    { 34 , -1 , "GPS"            , &calc_decimal } ,
+    { 40 , -1 , "Fuel1"          , &calc_decimal } ,
+    { 42 , -1 , "Fuel2"          , &calc_decimal } ,
+    { 49 , -1 , "Ign1"           , &calc_decimal } ,
+    { 50 , -1 , "Ign2"           , &calc_decimal } ,
+    { 54 , -1 , "STVA"           , &calc_stva }    ,
+    { 51 , -1 , "PAIR"           , &calc_decimal } ,
+    { 52 , -1 , "Clutch/FuelMap" , &calc_hex }     ,
     { 53 , -1 , "Neutral"        , &calc_hex }
 };
 // number of items in array.  Don't think we actually need this?
@@ -192,6 +198,7 @@ calc_rpm(char *str, int len, uint8_t a, uint8_t b) {
 
 /*
  * Calculates the Throttle Position Sensor
+ * (a - 55) * 100 / 169.0
  */
 char *
 calc_tps(char *str, int len, uint8_t a, uint8_t b) {
@@ -202,12 +209,52 @@ calc_tps(char *str, int len, uint8_t a, uint8_t b) {
 }
 
 /*
+ * Calculates the Throttle Position Sensor2
+ * Alternate algorithm based on Songtag
+ * a * 125) / 255
+ */
+char *
+calc_tps2(char *str, int len, uint8_t a, uint8_t b) {
+    char temp[10];
+    ftoa(temp, (float)(a) * 125.0 / 255.0, 2);
+    snprintf(str, len, "[0x%02x] %s", a, temp);
+    return str;
+}
+
+/*
+ * Calculates Intake Air Pressure
+ * (a - 153) * 133 / 4 / 255
+ * Songtag
+ */
+char *
+calc_iap(char *str, int len, uint8_t a, uint8_t b) {
+    char temp[10];
+    ftoa(temp, (float)((int)a - 153) * 133.0 / 4.0 / 255.0, 2);
+    snprintf(str, len, "[0x%02x] %s", a, temp);
+    return str;
+}
+
+/*
  * Calculates the Temp (C) for Air and Water
+ * (a - 48) * 0.625
  */
 char *
 calc_temp(char *str, int len, uint8_t a, uint8_t b) {
     char temp[10];
     ftoa(temp, (float)(a - 48) * 0.625, 1);
+    snprintf(str, len, "[0x%02x] %s", a, temp);
+    return str;
+}
+
+/*
+ * Calculates the Temp (C) for Air and Water 2
+ * (a * 160 / 255) - 30
+ * Songtag
+ */
+char *
+calc_temp2(char *str, int len, uint8_t a, uint8_t b) {
+    char temp[10];
+    ftoa(temp, ((float)a * 160.0 / 255.0) - 30.0, 2);
     snprintf(str, len, "[0x%02x] %s", a, temp);
     return str;
 }
