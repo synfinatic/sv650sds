@@ -14,7 +14,7 @@ char *calc_iap(char *str, int len, uint8_t a, uint8_t b);
 char *calc_stva(char *str, int len, uint8_t a, uint8_t b);
 char *calc_hex(char *str, int len, uint8_t a, uint8_t b);
 char *calc_decimal(char *str, int len, uint8_t a, uint8_t b);
-
+char *calc_battery(char *str, int len, uint8_t a, uint8_t b);
 
 
 #define ECU_CODES_LEN 17  // number of ecu codes we support below
@@ -27,6 +27,7 @@ const ECU_CODE ecu_codes[ECU_CODES_LEN] PROGMEM = {
     { 30 , -1 , "IAT"            , &calc_temp }    ,
     { 30 , -1 , "IAT2"           , &calc_temp2 }   ,
     { 31 , -1 , "IAP"            , &calc_iap }     ,
+    { 32 , -1 , "BATT"           , &calc_battery } ,
     { 34 , -1 , "GPS"            , &calc_decimal } ,
     { 40 , -1 , "Fuel1"          , &calc_decimal } ,
     { 42 , -1 , "Fuel2"          , &calc_decimal } ,
@@ -269,6 +270,21 @@ calc_stva(char *str, int len, uint8_t a, uint8_t b) {
     snprintf(str, len, "[0x%02x] %s", a, temp);
     return str;
 }
+
+/*
+ *  Calculate battery voltage
+ *  (a * 100) / 126 OR (a * 20) / 255
+ *  Not sure which, seen both formulas
+ */
+char *
+calc_battery(char *str, int len, uint8_t a, uint8_t b) {
+    char temp[10];
+    ftoa(temp, (float)(a * 100) / 126.0, 2);
+//     fota(temp, (float)(a * 20) / 255.0, 2);
+    sprintf(str, len, "[0x%02x] %s", a, temp);
+    return str;
+}
+
 
 /*
  * Generic Hex output
