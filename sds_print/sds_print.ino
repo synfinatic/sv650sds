@@ -36,6 +36,7 @@ setup() {
 void
 loop() {
     static bool overflow = false;
+    static bool first = true;
     static uint8_t msglen = 0;
     static uint32_t lastms = 0;
     static uint32_t force_blink = 0;
@@ -48,7 +49,6 @@ loop() {
         toggle_led();
         deltams = currentms - lastms;
         lastms = currentms;
-
 
         if (deltams > MINIMUM_MESSAGE_GAP) {
             if (process_message(message, msglen, deltams)) {
@@ -138,6 +138,8 @@ process_message(uint8_t *message, uint8_t msglen, uint32_t delay) {
     // Don't diff the sensors if we have an unknown message
     if (unknown)
         return false;
+
+    return true;
 
     if (message[1] == SDT_ID) {
         return true;
