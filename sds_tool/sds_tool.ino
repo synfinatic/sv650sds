@@ -4,6 +4,7 @@
 #include "PROGMEM_readAnything.h"
 
 bool process_message(uint8_t *message, uint8_t msglen, uint32_t delay);
+void print_message(uint8_t mess[], uint8_t msglen);
 void diff_sensors(uint8_t msglen);
 char *calc_rpm(char *str, int len, uint8_t a, uint8_t b);
 char *calc_tps(char *str, int len, uint8_t a, uint8_t b);
@@ -17,15 +18,15 @@ char *calc_decimal(char *str, int len, uint8_t a, uint8_t b);
 char *calc_battery(char *str, int len, uint8_t a, uint8_t b);
 
 
-#define ECU_CODES_LEN 17  // number of ecu codes we support below
+#define ECU_CODES_LEN 18  // number of ecu codes we support below
 const ECU_CODE ecu_codes[ECU_CODES_LEN] PROGMEM = {
     { 25 , 26 , "RPM"            , &calc_rpm }     ,
+    { 27 , -1 , "TPS2"           , &calc_tps2  }   ,
     { 27 , -1 , "TPS"            , &calc_tps  }    ,
-    { 27 , -1 , "TPS"            , &calc_tps2  }   ,
     { 29 , -1 , "ECT"            , &calc_temp  }   ,
     { 29 , -1 , "ECT2"           , &calc_temp2  }  ,
-    { 30 , -1 , "IAT"            , &calc_temp }    ,
     { 30 , -1 , "IAT2"           , &calc_temp2 }   ,
+    { 30 , -1 , "IAT"            , &calc_temp }    ,
     { 31 , -1 , "IAP"            , &calc_iap }     ,
     { 32 , -1 , "BATT"           , &calc_battery } ,
     { 34 , -1 , "GPS"            , &calc_decimal } ,
@@ -36,7 +37,7 @@ const ECU_CODE ecu_codes[ECU_CODES_LEN] PROGMEM = {
     { 54 , -1 , "STVA"           , &calc_stva }    ,
     { 51 , -1 , "PAIR"           , &calc_decimal } ,
     { 52 , -1 , "Clutch/FuelMap" , &calc_hex }     ,
-    { 53 , -1 , "Neutral"        , &calc_hex }
+    { 53 , -1 , "Neutral"        , &calc_hex }     ,
 };
 // number of items in array.  Don't think we actually need this?
 // template< typename T, size_t N > size_t ArraySize (T (&) [N]) { return N; }
@@ -114,7 +115,7 @@ loop() {
         if (force_blink + 1000 < currentms) {
             toggle_led();
             force_blink = currentms;
-            Console.printf("Waiting...\n");
+//            Console.printf("Waiting...\n");
         }
     }
 }
@@ -152,19 +153,19 @@ process_message(uint8_t *message, uint8_t msglen, uint32_t delay) {
     // Print the header based on the above checks
     switch (verify) {
         case (ECU_ID + 1):
-            console_printf(F("OK ToECU [%03lums] %d: "), delay, msglen);
+            console_printf(F("OK ToECU [%03lums] %db: "), delay, msglen);
             break;
         case (SDT_ID + 1):
-            console_printf(F("OK FromECU [%03lums] %d: "), delay, msglen);
+            console_printf(F("OK FromECU [%03lums] %db: "), delay, msglen);
             break;
         case (ECU_ID + 2):
-            console_printf(F("BAD ToECU [%03lums] %d: "), delay, msglen);
+            console_printf(F("BAD ToECU [%03lums] %db: "), delay, msglen);
             break;
         case (SDT_ID + 2):
-            console_printf(F("BAD FromECU [%03lums] %d: "), delay, msglen);
+            console_printf(F("BAD FromECU [%03lums] %db: "), delay, msglen);
             break;
         default:
-            console_printf(F("Uknown message [%03lums] %d\n"), delay, msglen);
+            console_printf(F("Uknown message [%03lums] %db\n"), delay, msglen);
             unknown = true;
     }
 
@@ -180,8 +181,10 @@ process_message(uint8_t *message, uint8_t msglen, uint32_t delay) {
         return false;
 
     // Diff sensors if checksum is OK
-    if (csum == message[msglen - 1]) {
-        diff_sensors(msglen);
+//    if (csum == message[msglen - 1] && ((verify & ECU_ID) == ECU_ID)) {
+    if (message[1] == SDT_ID) {
+        print_message(message, msglen);
+//        diff_sensors(msglen);
         return true;
     }
     return false;
@@ -281,7 +284,7 @@ calc_battery(char *str, int len, uint8_t a, uint8_t b) {
     char temp[10];
     ftoa(temp, (float)(a * 100) / 126.0, 2);
 //     fota(temp, (float)(a * 20) / 255.0, 2);
-    sprintf(str, len, "[0x%02x] %s", a, temp);
+    snprintf(str, len, "[0x%02x] %s", a, temp);
     return str;
 }
 
@@ -311,7 +314,6 @@ void
 diff_sensors(uint8_t msglen) {
     int i;
     uint8_t a_sensor, b_sensor;
-#define TEMP_STR_LEN 15
     char last_str[TEMP_STR_LEN], current_str[TEMP_STR_LEN];
     ECU_CODE ecu_code;
 
@@ -319,13 +321,13 @@ diff_sensors(uint8_t msglen) {
         PROGMEM_readAnything(&ecu_codes[i], ecu_code);
         a_sensor = ecu_code.a_index;
         b_sensor = ecu_code.b_index;
-        if (a_sensor > msglen || b_sensor > msglen) {
-            Console.printf("Invalid message length (%u). Unable to lookup %s at %d/%d\n",
+        if (a_sensor > msglen || (b_sensor != 255 && b_sensor > msglen)) {
+            Console.printf("Invalid message length (%u). Unable to lookup %s at %u/%u\n",
                     msglen, ecu_code.name, a_sensor, b_sensor);
             continue;
 
         }
-        if (b_sensor != -1) {
+        if (b_sensor != 255) {
             // needs two bytes
             if ((last_message[a_sensor] != message[a_sensor]) &&
                     (last_message[b_sensor] != message[b_sensor])) {
@@ -344,4 +346,24 @@ diff_sensors(uint8_t msglen) {
         i++;
     }
 
+}
+
+void
+print_message(uint8_t mess[], uint8_t msglen) {
+    int i;
+    uint8_t a_sensor, b_sensor;
+    char current_str[TEMP_STR_LEN];
+    ECU_CODE ecu_code;
+
+    for (i = 0; i < ECU_CODES_LEN; i++) {
+        PROGMEM_readAnything(&ecu_codes[i], ecu_code);
+        a_sensor = ecu_code.a_index;
+        b_sensor = ecu_code.b_index;
+        if (a_sensor > msglen || (b_sensor != 255 && b_sensor > msglen)) {
+            Console.printf("Skipping %s because message wasn't long enough %u\n", ecu_code.name, msglen);
+            continue;
+        }
+        ecu_code.formatter(current_str, TEMP_STR_LEN, mess[a_sensor], mess[b_sensor]);
+        Console.printf("%s: %s\n", ecu_code.name, current_str);
+    }
 }

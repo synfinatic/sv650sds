@@ -26,6 +26,7 @@
 #define MINIMUM_MESSAGE_GAP 20
 
 #define MAX_MSG_LEN 100          // maximum number of bytes in a single message
+#define TEMP_STR_LEN 15
 
 #define ECU_ID 0x12              // ECU ID
 #define SDT_ID 0xf1              // SDS Test Tool ID

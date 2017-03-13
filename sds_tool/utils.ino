@@ -38,13 +38,16 @@ toggle_led() {
 char *
 ftoa(char *a, double f, int precision) {
     long p[] = { 0,10,100,1000,10000,100000,1000000,10000000,100000000 };
-
     char *ret = a;
     long heiltal = (long)f;
+    long desimal;
+
     itoa(heiltal, a, 10);
-    while (*a != '\0') a++;
+    while (*a != '\0') {
+        a++;
+    }
     *a++ = '.';
-    long desimal = abs((long)((f - heiltal) * p[precision]));
+    desimal = abs((long)((f - heiltal) * p[precision]));
     itoa(desimal, a, 10);
     return ret;
 }
@@ -62,7 +65,8 @@ console_printf(const char *fmt, ...) {
     Console.print(tmp);
 }
 
-void console_printf(const __FlashStringHelper *fmt, ... ){
+void 
+console_printf(const __FlashStringHelper *fmt, ... ) {
     char buf[128]; // resulting string limited to 128 chars
     va_list args;
     va_start (args, fmt);
