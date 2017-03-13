@@ -3,34 +3,34 @@
 import argparse
 from serial import Serial
 import sys
-import time
 import os
 
 __doc__ = """ Decodes SDS messages from sds_tool.ino """
 
 DECODE_MAP = [
-    [ 'RPM', 25, 26, 'rpm'],
-    [ 'TPS', 19, None, 'tps'],
-    [ 'TPS2', 27, None, 'tps'],
-    [ 'ECT', 29, None, 'temp'],
-    [ 'IAT', 30, None, 'temp'],
-    [ 'IAP', 31, None, 'iap'],
-    [ 'GPS', 34, None, 'hex'],
-    [ 'STVA', 54, None, 'stva'],
-    [ 'Fuel1', 40, None, 'decimal'],
-    [ 'Fuel2', 42, None, 'decimal'],
-    [ 'Ign1', 49, None, 'decimal'],
-    [ 'Ign2', 50, None, 'decimal'],
-    [ 'PAIR', 51, None, 'decimal'],
-    [ 'Battery', 32, None, 'battery'],
-    [ 'Neutral', 53, None, 'hex'],
-    [ 'Clutch/FuelMap', 52, None, 'hex'],
+    ['RPM', 25, 26, 'rpm'],
+    ['TPS', 19, None, 'tps'],
+    ['TPS2', 27, None, 'tps'],
+    ['ECT', 29, None, 'temp'],
+    ['IAT', 30, None, 'temp'],
+    ['IAP', 31, None, 'iap'],
+    ['GPS', 34, None, 'hex'],
+    ['STVA', 54, None, 'stva'],
+    ['Fuel1', 40, None, 'decimal'],
+    ['Fuel2', 42, None, 'decimal'],
+    ['Ign1', 49, None, 'decimal'],
+    ['Ign2', 50, None, 'decimal'],
+    ['PAIR', 51, None, 'decimal'],
+    ['Battery', 32, None, 'battery'],
+    ['Neutral', 53, None, 'hex'],
+    ['Clutch/FuelMap', 52, None, 'hex'],
 ]
+
 
 class Decode(object):
     limits = []
-    quiet = False # print message in hex
-    minmax = False # print min/max values
+    quiet = False  # print message in hex
+    minmax = False  # print min/max values
     maximums = dict()
     minimums = dict()
 
@@ -93,7 +93,7 @@ class Decode(object):
 
     def decode_str(self):
         if not Decode.limits:
-            return self.__decode_str();
+            return self.__decode_str()
         else:
             for limit in Decode.limits:
                 if limit.lower() in self.name.lower():
@@ -140,7 +140,7 @@ class Decode(object):
             return self.ret
         else:
             self.value = self.bytea * 255 + self.byteb
-            self.ret ="0x%02x%02x" % (self.bytea, self.byteb)
+            self.ret = "0x%02x%02x" % (self.bytea, self.byteb)
             self.update()
             return self.ret
 
@@ -163,7 +163,7 @@ class Decode(object):
     def temp(self):
         """ Temperature
         (a - 48) * .625"""
-        self.value = (float)(self.bytea - 48) * 0.625;
+        self.value = (float)(self.bytea - 48) * 0.625
         self.ret = "%.2f" % (self.value,)
         self.update()
         return self.ret
@@ -171,7 +171,7 @@ class Decode(object):
     def temp2(self):
         """ Temperature 2
         ((a * 160) / 255) - 30"""
-        self.value = ((float)(a * 160) / 255.0) - 30.0
+        self.value = ((float)(self.bytea * 160) / 255.0) - 30.0
         self.ret = "%0.2f" % (self.value,)
         self.update()
         return self.ret
@@ -306,5 +306,3 @@ if __name__ == "__main__":
             while line:
                 process(line.rstrip())
                 line = f.readline()
-
-
