@@ -11,11 +11,11 @@ __doc__ = """ Decodes SDS messages from sds_tool.ino """
 DECODE_MAP = [
     [ 'RPM', 25, 26, 'rpm'],
     [ 'TPS', 19, None, 'tps'],
+    [ 'TPS2', 27, None, 'tps'],
     [ 'ECT', 29, None, 'temp'],
     [ 'IAT', 30, None, 'temp'],
     [ 'IAP', 31, None, 'iap'],
     [ 'GPS', 34, None, 'hex'],
-    [ 'TPS', 27, None, 'tps'],
     [ 'STVA', 54, None, 'stva'],
     [ 'Fuel1', 40, None, 'decimal'],
     [ 'Fuel2', 42, None, 'decimal'],
@@ -26,80 +26,188 @@ DECODE_MAP = [
     [ 'Neutral', 53, None, 'hex'],
     [ 'Clutch/FuelMap', 52, None, 'hex'],
 ]
+
 class Decode(object):
+    limits = []
+    quiet = False # print message in hex
+    minmax = False # print min/max values
+    maximums = dict()
+    minimums = dict()
+
     def __init__(self, name, method, bytea, byteb=None):
         self.name = name
         self.method = method
         self.bytea = bytea
         self.byteb = byteb
+        self.value = None
+
+    @staticmethod
+    def set_limits(names):
+        for limit in names:
+            Decode.limits.append(limit)
+
+    @staticmethod
+    def set_quiet(tf):
+        Decode.quiet = tf
+
+    @staticmethod
+    def set_minmax(tf):
+        Decode.minmax = tf
+
+    def update(self, bytea=None, byteb=None, value=None, ret=None):
+        if value is None:
+            self.min(self.bytea, self.byteb, self.value, self.ret)
+            self.max(self.bytea, self.byteb, self.value, self.ret)
+        else:
+            self.min(bytea, byteb, value, ret)
+            self.max(bytea, byteb, value, ret)
+
+    def max(self, bytea=None, byteb=None, value=None, ret=None):
+        if ret is None:
+            return self.__decode_bytes(Decode.maximums[self.name][1],
+                                    Decode.maximums[self.name][2])
+        if self.name in Decode.maximums:
+            if value > Decode.maximums[self.name][0]:
+                Decode.maximums[self.name] = [value, bytea, byteb, ret]
+        else:
+            Decode.maximums[self.name] = [value, bytea, byteb, ret]
+        return self.decode_max()
+
+    def min(self, bytea=None, byteb=None, value=None, ret=None):
+        if ret is None:
+            return self.__decode_bytes(Decode.minimums[self.name][1],
+                                    Decode.minimums[self.name][2])
+
+        if self.name in Decode.minimums:
+            if value < Decode.minimums[self.name][0]:
+                Decode.minimums[self.name] = [value, bytea, byteb, ret]
+        else:
+            Decode.minimums[self.name] = [value, bytea, byteb, ret]
+        return self.decode_min()
+
+    def decode_min(self):
+        return Decode.minimums[self.name][3]
+
+    def decode_max(self):
+        return Decode.maximums[self.name][3]
 
     def decode_str(self):
-        if self.byteb:
-            vals = "%02x%02x" % (self.bytea, self.byteb)
+        if not Decode.limits:
+            return self.__decode_str();
         else:
-            vals = "%02x" % (self.bytea)
+            for limit in Decode.limits:
+                if limit.lower() in self.name.lower():
+                    return self.__decode_str()
+        return ""
 
-        return "%s [%s]: %s" % (self.name, vals, self.decode())
+    def __decode_bytes(self, bytea, byteb=None):
+        if byteb is None:
+            vals = "%02x" % (bytea)
+        else:
+            vals = "%02x%02x" % (bytea, byteb)
+        return vals
+
+    def __decode_str(self):
+        vals = self.__decode_bytes(self.bytea, self.byteb)
+        decoded = "{:>14s} [{:>4s}] decode: {:6s}".format(
+            self.name, vals, self.decode())
+        if self.minmax:
+            decoded = "{}\tmin: [{:>4s}] {:6s}\tmax: [{:>4s}] {:6s}".format(
+                decoded, self.min(), self.decode_min(),
+                self.max(), self.decode_max())
+        return decoded
 
     def decode(self):
         return getattr(self, self.method)()
 
     def decimal(self):
-        if not self.byteb:
-            return "%d" % (self.bytea,)
+        if self.byteb is None:
+            self.value = self.bytea
+            self.ret = "%d" % (self.bytea,)
+            self.update()
+            return self.ret
         else:
-            return "%d%d" % (self.bytea, self.byteb)
+            self.value = self.bytea * 255 + self.byteb
+            self.ret = "%d%d" % (self.bytea, self.byteb)
+            self.update()
+            return self.ret
 
     def hex(self):
-        if not self.byteb:
-            return "0x%02x" % (self.bytea,)
+        if self.byteb is None:
+            self.value = self.bytea
+            self.ret = "0x%02x" % (self.bytea,)
+            self.update()
+            return self.ret
         else:
-            return "0x%02x%02x" % (self.bytea, self.byteb)
+            self.value = self.bytea * 255 + self.byteb
+            self.ret ="0x%02x%02x" % (self.bytea, self.byteb)
+            self.update()
+            return self.ret
 
     def iap(self):
         """ Air Intake Pressure
         (a - 153) * 133 / 4 / 255 """
-        val = (float)(self.bytea - 153.0) * 133.0 / 4.0 / 255.0
-        return "%.2f" % (val,)
+        self.value = (float)(self.bytea - 153.0) * 133.0 / 4.0 / 255.0
+        self.ret = "%.2f" % (self.value,)
+        self.update()
+        return self.ret
 
     def battery(self):
         """ Battery Voltage
         a / 1.26"""
-        val = (float)(self.bytea) / 1.260
-        return "%.2f" % (val,)
+        self.value = (float)(self.bytea) / 1.260
+        self.ret = "%.2f" % (self.value,)
+        self.update()
+        return self.ret
 
     def temp(self):
         """ Temperature
         (a - 48) * .625"""
-        val = (float)(self.bytea - 48) * 0.625;
-        return "%.2f" % (val,)
+        self.value = (float)(self.bytea - 48) * 0.625;
+        self.ret = "%.2f" % (self.value,)
+        self.update()
+        return self.ret
 
     def temp2(self):
         """ Temperature 2
         ((a * 160) / 255) - 30"""
-        val = ((float)(a * 160) / 255.0) - 30.0
-        return "%0.2f" % (val,)
+        self.value = ((float)(a * 160) / 255.0) - 30.0
+        self.ret = "%0.2f" % (self.value,)
+        self.update()
+        return self.ret
 
     def rpm(self):
         """ Engine RPM
         (a * 100) + b"""
-        return "%d" % ((self.bytea * 100) + self.byteb)
+        self.value = (self.bytea * 100) + self.byteb
+        self.ret = "%05u" % (self.value,)
+        self.update()
+        return self.ret
 
     def tps(self):
         """ Throttle Position Sensor
         (a - 55) / 1.69"""
-        val = (float)(self.bytea - 55) / 1.69
-        return "%.2f" % (val,)
+        self.value = (float)(self.bytea - 55) / 1.69
+        self.ret = "%.2f" % (self.value,)
+        self.update()
+        return self.ret
 
     def stva(self):
         """ Secondary Throttle
         (a / 2.55)"""
-        val = (float)(self.bytea) / 2.55
-        return "%.2f" % (val,)
+        self.value = (float)(self.bytea) / 2.55
+        self.ret = "%.2f" % (self.value,)
+        self.update()
+        return self.ret
 
 
 def print_bytes(bstr):
     """ Prints the actual message bytes as a pair of 4 byte columns """
+
+    if Decode.quiet:
+        print "*" * 79
+        return
+
     btes = bstr.split(',')
     start = 0
     increment = 4
@@ -133,10 +241,12 @@ def process(line):
         for val in DECODE_MAP:
             bytea = values[val[1]]
             byteb = None
-            if val[2]:
+            if val[2] is not None:
                 byteb = values[val[2]]
             code = Decode(val[0], val[3], bytea, byteb)
-            print code.decode_str()
+            decoded = code.decode_str()
+            if decoded:
+                print decoded
     else:
         sys.stdout.write("*** Wrong len (%d): %s" % (len(values), line))
 
@@ -149,9 +259,19 @@ if __name__ == "__main__":
     parser.add_argument('-f', dest='file', help="Load log file")
     parser.add_argument('-w', dest='output', help='Output log file')
     parser.add_argument('-d', dest='debug', action='store_true', help='Debug')
+    parser.add_argument('-l', dest='limit', action='append',
+                        help='Limit decode output')
+    parser.add_argument('-q', dest='quiet', action='store_true', default=False,
+                        help="Don't print raw message")
+    parser.add_argument('-m', dest='minmax', action='store_true',
+                        default=False, help='Print min/max values')
 
     args = parser.parse_args()
     debug_enabled = args.debug
+    if args.limit:
+        Decode.set_limits(args.limit)
+    Decode.set_quiet(args.quiet)
+    Decode.set_minmax(args.minmax)
 
     if not args.port and not args.file:
         print "Please specify a serial port or log file"
