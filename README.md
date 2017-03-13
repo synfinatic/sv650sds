@@ -48,6 +48,7 @@ the messages to figure out:
  - Build a lookup table to map payload values to something meaningful
  - Convert payload to useful messages
 
+Ended up abandoning this method as the small capture window made things too difficult.
 
 Teensy + STL9637D
 =================
@@ -56,6 +57,34 @@ Using a simplified version of the code from here: https://github.com/o5i/Datalog
 I was able to validate that the Teensy/STL9637D can communicate to the bike.
 Connecting the two is pretty straight forward (just need +12V, GND and the K-Line 
 off the bike), but you need to remember a 500-1k pull up resistor on the K-Line.
+
+Ended up abandoning this method because doing all the decoding on the Teensy using
+Processing was not efficient enough.
+
+Teensy + Python
+===============
+
+After a while, I realized that trying to iterate over decoding the protocol directly
+on the Teensy was really painful.  I wanted a way to:
+
+ - Write code in a higher level language like Python
+ - Easily save the raw data to disk and use that for apples-to-apples comparison of 
+    different versions of the protocol decoder
+
+The result is dumbing down the Teensy code so it just handles the framing 
+([sds_print](https://github.com/synfinatic/sv650sds/tree/master/sds_print))
+and a new Python script 
+([read_serial.py](https://github.com/synfinatic/sv650sds/blob/master/tools/read_serial.py)) 
+to process the messages.  This has turned out to be much more powerful and easier 
+to iterate over then writing in Processing and reprogramming the Teensy each 
+time (duh!).
+
+The only challenge really is that the commercial SDS tool won't export timestamped 
+records.  This means I have to *manually* align messages which *sucks*.  I'm probably
+going to have to come up with a way to insert my own marks into the data stream for
+alignment purposes- probably using the gear position sensor since that is easy to locate
+in the data stream, written raw and should be easy to manipulate/create a test harness
+for.
 
 External References
 ===================
