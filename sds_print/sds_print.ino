@@ -2,6 +2,12 @@
 #include "sds_print.h"
 #include "utils.h"
 
+/*
+ * Simple program to handle the framing of the SDS protocol, but not 
+ * do any actual decoding.  All decoding of ECU messages is handled
+ * by the read_serial.py script.
+ */
+
 uint8_t last_message[MAX_MSG_LEN];
 uint8_t message[MAX_MSG_LEN];
 
@@ -62,8 +68,6 @@ loop() {
             // Only print the warning once per read() until we reach the message gap
             if (!overflow) {
                 overflow = true;
-//                Console.printf("\n******\nERROR: ECU Message is larger then %u"
-//                       " bytes! Unable to process!\n******", MAX_MSG_LEN);
             }
             return;  // return now so we don't increment msglen
         }
@@ -74,7 +78,6 @@ loop() {
         if (force_blink + 1000 < currentms) {
             toggle_led();
             force_blink = currentms;
-//            Console.printf("Waiting...\n");
         }
     }
 }
@@ -90,7 +93,6 @@ process_message(uint8_t *message, uint8_t msglen, uint32_t delay) {
     uint8_t verify = 0;
 
     if (msglen < 4) {
-//        Console.printf("Wow!  Short message.  %d bytes long\n", msglen);
         return false;
     }
 
@@ -111,9 +113,6 @@ process_message(uint8_t *message, uint8_t msglen, uint32_t delay) {
 
     // Print the header based on the above checks
     switch (verify) {
-        case (ECU_ID + 1):
-//            console_printf(F("OK ToECU [%03lums] %db: "), delay, msglen);
-            break;
         case (SDT_ID + 1):
             console_printf(F("OK FromECU [%03lums] %db: "), delay, msglen);
             for (i = 0; i < (msglen - 1); i++) {
@@ -122,28 +121,9 @@ process_message(uint8_t *message, uint8_t msglen, uint32_t delay) {
             // last/checksum byte has a newline instead of a comma after it
             Console.printf("%02x\n", message[i]);
             break;
-        case (ECU_ID + 2):
-//            console_printf(F("BAD ToECU [%03lums] %db: "), delay, msglen);
-            break;
-        case (SDT_ID + 2):
-//            console_printf(F("BAD FromECU [%03lums] %db: "), delay, msglen);
-            break;
         default:
-//            console_printf(F("Uknown message [%03lums] %db\n"), delay, msglen);
-            unknown = true;
+            return false;
     }
-
-    // print the message
-
-    // Don't diff the sensors if we have an unknown message
-    if (unknown)
-        return false;
-
     return true;
-
-    if (message[1] == SDT_ID) {
-        return true;
-    }
-    return false;
 }
 

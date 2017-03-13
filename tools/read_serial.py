@@ -5,7 +5,7 @@ from serial import Serial
 import sys
 import os
 
-__doc__ = """ Decodes SDS messages from sds_tool.ino """
+__doc__ = """ Decodes SDS messages from the sds_print utility """
 
 DECODE_MAP = [
     ['RPM', 25, 26, 'rpm'],
