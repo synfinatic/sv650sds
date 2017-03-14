@@ -1,5 +1,5 @@
-#ifndef __SDS_TOOL_H__
-#define __SDS_TOOL_H__
+#ifndef __SDS_DECODE_H__
+#define __SDS_DECODE_H__
 
 #include <avr/pgmspace.h>
 
