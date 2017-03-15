@@ -86,6 +86,10 @@ alignment purposes- probably using the gear position sensor since that is easy t
 in the data stream, written raw and should be easy to manipulate/create a test harness
 for.
 
+The result is I've 
+[designed a custom PCB](https://github.com/synfinatic/sv650sds/tree/master/sds_tool) 
+using KiCad to do just that.
+
 External References
 ===================
 

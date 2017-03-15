@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/Users/aturner/GIT/sv650sds/sds_tool/sds_tool.sch</source>
+    <date>Tuesday, March 14, 2017 'PMt' 08:33:37 PM</date>
+    <tool>Eeschema 4.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Suzuki SDS Tool</title>
+        <company>Aaron Turner &lt;synfinatic@gmail.com&gt;</company>
+        <rev>v0.1</rev>
+        <date>2017-02-25</date>
+        <source>sds_tool.sch</source>
+        <comment number="1" value="https://synfin.net/sv650sds"/>
+        <comment number="2" value="Suzuki SDS Diagnostic and Reverse Engineering Tool"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U2">
+      <value>STl9637</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="synfinatic" part="STl9637"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C74BC4</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>560</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C74C4A</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>630</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C74C90</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>1.5k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C74CBB</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>2.7k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C74CE4</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>6.8k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C74D12</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>15k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C74D3D</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C74DCD</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>MMBT3904</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="MMBT3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C7772F</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>MMBT3904</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="MMBT3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C77773</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>MMBT3904</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="MMBT3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C777A1</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>MMBT3904</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="MMBT3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C777D2</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>MMBT3904</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="MMBT3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C77803</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>MMBT3904</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <libsource lib="transistors" part="MMBT3904"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C7783D</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>510</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C78952</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>CONN_01X06</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Pheonix_PT-3.5mm_6pol</footprint>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C8ADB8</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>Teensy2.0</value>
+      <footprint>Teensy:Teensy2.0</footprint>
+      <libsource lib="teensy" part="Teensy2.0"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58C779C9</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="conn" part="CONN_01X06">
+      <description>Connector, single row, 01x06</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X06</fp>
+        <fp>Pin_Header_Angled_1X06</fp>
+        <fp>Socket_Strip_Straight_1X06</fp>
+        <fp>Socket_Strip_Angled_1X06</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="transistors" part="MMBT3904">
+      <description>40V Vce, 0.2A Ic, NPN, Small Signal Transistor, SOT-23</description>
+      <docs>http://www.nxp.com/documents/data_sheet/MMBT3904.pdf</docs>
+      <footprints>
+        <fp>SOT-23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MMBT3904</field>
+        <field name="Footprint">SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="synfinatic" part="STl9637">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">STl9637</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RX" type="input"/>
+        <pin num="2" name="LO" type="input"/>
+        <pin num="3" name="VCC" type="input"/>
+        <pin num="4" name="TX" type="input"/>
+        <pin num="5" name="GND" type="input"/>
+        <pin num="6" name="K" type="input"/>
+        <pin num="7" name="VS" type="input"/>
+        <pin num="8" name="LI" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="teensy" part="Teensy2.0">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Teensy2.0</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="0" type="BiDi"/>
+        <pin num="3" name="1" type="BiDi"/>
+        <pin num="4" name="2" type="BiDi"/>
+        <pin num="5" name="3" type="BiDi"/>
+        <pin num="6" name="4_PWM" type="BiDi"/>
+        <pin num="7" name="5_INT0_PWM" type="BiDi"/>
+        <pin num="8" name="6_INT1" type="BiDi"/>
+        <pin num="9" name="7_INT2_RX" type="BiDi"/>
+        <pin num="10" name="8_INT3_TX" type="BiDi"/>
+        <pin num="11" name="9_PWM" type="BiDi"/>
+        <pin num="12" name="10_PWM" type="BiDi"/>
+        <pin num="13" name="23" type="BiDi"/>
+        <pin num="14" name="+5V" type="power_in"/>
+        <pin num="15" name="GND" type="power_in"/>
+        <pin num="16" name="RST" type="input"/>
+        <pin num="17" name="22_A11" type="BiDi"/>
+        <pin num="18" name="11_A10_LED" type="BiDi"/>
+        <pin num="19" name="12_A9_PWM" type="BiDi"/>
+        <pin num="20" name="13_A8" type="BiDi"/>
+        <pin num="21" name="14_A7_PWM" type="BiDi"/>
+        <pin num="22" name="15_A6_PWM" type="BiDi"/>
+        <pin num="23" name="16_A5" type="BiDi"/>
+        <pin num="24" name="17_A4" type="BiDi"/>
+        <pin num="25" name="18_A3" type="BiDi"/>
+        <pin num="27" name="20_A1" type="BiDi"/>
+        <pin num="28" name="21_A0" type="BiDi"/>
+        <pin num="29" name="+5V" type="power_in"/>
+        <pin num="30" name="24" type="BiDi"/>
+        <pin num="31" name="AREF" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/Library/Application Support/kicad/library/device.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/Library/Application Support/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="transistors">
+      <uri>/Library/Application Support/kicad/library/transistors.lib</uri>
+    </library>
+    <library logical="synfinatic">
+      <uri>/Users/aturner/KiCad/libs/kicad-synfinatic/synfinatic.lib</uri>
+    </library>
+    <library logical="teensy">
+      <uri>/Users/aturner/KiCad/libs/kicad_teensy/teensy.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GPS">
+      <node ref="R2" pin="2"/>
+      <node ref="U1" pin="28"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="2" name="+12V">
+      <node ref="P1" pin="1"/>
+      <node ref="U2" pin="7"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="3" name="TTL_K_TX">
+      <node ref="U2" pin="4"/>
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="4" name="TTL_K_RX">
+      <node ref="U1" pin="9"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="5" name="+5V">
+      <node ref="U2" pin="3"/>
+      <node ref="U1" pin="29"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="6" name="Net-(Q4-Pad3)">
+      <node ref="Q4" pin="3"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="7" name="Net-(Q5-Pad3)">
+      <node ref="Q5" pin="3"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="8" name="Net-(Q6-Pad3)">
+      <node ref="R8" pin="2"/>
+      <node ref="Q6" pin="3"/>
+    </net>
+    <net code="9" name="ECU_GPS">
+      <node ref="R4" pin="1"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="R7" pin="1"/>
+      <node ref="P1" pin="2"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="10" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="11" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="12" name="Net-(U1-Pad30)">
+      <node ref="U1" pin="30"/>
+    </net>
+    <net code="13" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="14" name="Net-(U1-Pad21)">
+      <node ref="U1" pin="21"/>
+    </net>
+    <net code="15" name="Net-(U1-Pad31)">
+      <node ref="U1" pin="31"/>
+    </net>
+    <net code="16" name="Net-(U1-Pad12)">
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="17" name="Net-(U1-Pad22)">
+      <node ref="U1" pin="22"/>
+    </net>
+    <net code="18" name="Net-(U1-Pad13)">
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="19" name="Net-(U1-Pad23)">
+      <node ref="U1" pin="23"/>
+    </net>
+    <net code="20" name="Net-(U1-Pad14)">
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="21" name="Net-(U1-Pad24)">
+      <node ref="U1" pin="24"/>
+    </net>
+    <net code="23" name="Net-(U1-Pad25)">
+      <node ref="U1" pin="25"/>
+    </net>
+    <net code="24" name="Net-(U1-Pad16)">
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="25" name="Net-(U1-Pad17)">
+      <node ref="U1" pin="17"/>
+    </net>
+    <net code="26" name="Net-(U1-Pad27)">
+      <node ref="U1" pin="27"/>
+    </net>
+    <net code="27" name="Net-(U1-Pad18)">
+      <node ref="U1" pin="18"/>
+    </net>
+    <net code="28" name="OUTPUT">
+      <node ref="U1" pin="19"/>
+      <node ref="P1" pin="5"/>
+    </net>
+    <net code="29" name="GND">
+      <node ref="U1" pin="15"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="Q3" pin="2"/>
+      <node ref="Q4" pin="2"/>
+      <node ref="Q5" pin="2"/>
+      <node ref="Q6" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="P1" pin="6"/>
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="30" name="Net-(U2-Pad8)">
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="31" name="Net-(U2-Pad2)">
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="32" name="Gear3">
+      <node ref="Q3" pin="1"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="33" name="Gear4">
+      <node ref="U1" pin="5"/>
+      <node ref="Q4" pin="1"/>
+    </net>
+    <net code="34" name="Gear5">
+      <node ref="Q5" pin="1"/>
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="35" name="Gear6">
+      <node ref="U1" pin="7"/>
+      <node ref="Q6" pin="1"/>
+    </net>
+    <net code="36" name="Net-(Q3-Pad3)">
+      <node ref="Q3" pin="3"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="37" name="Gear1">
+      <node ref="Q1" pin="1"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="38" name="Net-(Q1-Pad3)">
+      <node ref="R3" pin="2"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="39" name="Gear2">
+      <node ref="U1" pin="3"/>
+      <node ref="Q2" pin="1"/>
+    </net>
+    <net code="40" name="Net-(Q2-Pad3)">
+      <node ref="Q2" pin="3"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="41" name="K_LINE">
+      <node ref="R1" pin="2"/>
+      <node ref="P1" pin="4"/>
+      <node ref="U2" pin="6"/>
+    </net>
+  </nets>
+</export>

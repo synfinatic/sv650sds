@@ -1,0 +1,29 @@
+Source,/Users/aturner/GIT/sv650sds/sds_tool/sds_tool.sch
+Kicad Rev,Eeschema 4.0.5
+Generated Date,Tuesday, March 14, 2017 'PMt' 08:33:37 PM
+
+Title,Suzuki SDS Tool
+Company,Aaron Turner <synfinatic@gmail.com>
+Revision,v0.1
+Date Issue,2017-02-25
+Comment,https://synfin.net/sv650sds
+Comment,Suzuki SDS Diagnostic and Reverse Engineering Tool
+
+Reference,Value,Library,Library Ref
+U2,STl9637,synfinatic,STl9637
+R3,560,device,R
+R4,630,device,R
+R5,1.5k,device,R
+R6,2.7k,device,R
+R7,6.8k,device,R
+R8,15k,device,R
+R2,1k,device,R
+Q1,MMBT3904,transistors,MMBT3904
+Q2,MMBT3904,transistors,MMBT3904
+Q3,MMBT3904,transistors,MMBT3904
+Q4,MMBT3904,transistors,MMBT3904
+Q5,MMBT3904,transistors,MMBT3904
+Q6,MMBT3904,transistors,MMBT3904
+R1,510,device,R
+P1,CONN_01X06,conn,CONN_01X06
+U1,Teensy2.0,teensy,Teensy2.0
